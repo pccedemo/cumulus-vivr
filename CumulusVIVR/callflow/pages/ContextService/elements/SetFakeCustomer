@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@879283996:1558572133373" name="SetFakeCustomer" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="After" name="first_name">Michael</data>
+<data create_when="After" name="last_name">Littlefoot</data>
+<data create_when="After" name="street_address_1">1125 Madison Avenue</data>
+<data create_when="After" name="street_address_2">1125 Madison Avenue</data>
+<data create_when="After" name="city">New York</data>
+<data create_when="After" name="state">NY</data>
+<data create_when="After" name="zip">10028</data>
+<data create_when="After" name="country">United States</data>
+<data create_when="After" name="mobile_phone">2127892001</data>
+<data create_when="After" name="work_phone">2127892001</data>
+<data create_when="After" name="home_phone">2127892001</data>
+<data create_when="After" name="work_email">michael.littlefoot@dcloud.cisco.com</data>
+<data create_when="After" name="home_email">michael.littlefoot@dcloud.cisco.com</data>
+<data create_when="After" name="customer_external_id">no_vertical_selected</data>
+<data create_when="After" name="vertical_id">no_vertical_selected</data>
+</session_data>
+</config>
+</action_element>

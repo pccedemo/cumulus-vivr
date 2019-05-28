@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@4982081:1472985175611" name="VisualIVR" version="6.0.1">
+<element height="46" id="Element@15543847:1472985175611" name="VisualIVR" type="Page Entry" width="98" x="30" y="12">
+<exit_states>
+<exit_state name="next" target="Element@1384237986:1500800471560"/>
+</exit_states>
+</element>
+<element height="46" id="Element@25332809:1472985204627" name="VIVRLoop" type="Page Connector" width="104" x="27" y="636">
+<page_connector target="Element@8938771:1464808880952">VIVRLoop<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@16204083:1472985283362" name="PlaySMSSent" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="118" x="24" y="564">
+<exit_states>
+<exit_state name="done" target="Element@25332809:1472985204627"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1904498956:1500566040923" name="SendSMS" skipped="true" src="SendSMSFromJacadaToLaunchVisualIVR" type="Decision Element" width="99" x="218" y="564">
+<exit_states>
+<exit_state name="done" target="Element@16204083:1472985283362"/>
+<exit_state name="error" target="Element@581031535:1500841454449">
+<bendpoint>
+<dim1 x="113" y="-60"/>
+<dim2 x="98" y="59"/>
+</bendpoint>
+</exit_state>
+<exit_state name="exception" target="Element@581031535:1500841454449"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1384237986:1500800471560" name="VoiceProxyInit" src="VoiceProxyInit" type="Action Element" width="125" x="16" y="87">
+<exit_states>
+<exit_state name="done" target="Element@2087895938:1500800471560"/>
+</exit_states>
+</element>
+<element height="46" id="Element@2087895938:1500800471560" name="On Call True" src="SetOnCall" type="Action Element" width="116" x="21" y="168">
+<exit_states>
+<exit_state name="done" target="Element@892467649:1500801396500"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1157046261:1500801396500" name="NoVIVR" type="Page Connector" width="104" x="216" y="336">
+<page_connector target="Element@564058766:1505426014810">NoVIVR<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@892467649:1500801396500" name="VisualIVRMenu" src="com.audium.server.voiceElement.menu.MFoundation2OptionMenu" type="Voice Element" width="129" x="16" y="240">
+<exit_states>
+<exit_state name="option1" target="Element@431078781:1547260216703"/>
+<exit_state name="option2" target="Element@1157046261:1500801396500"/>
+<exit_state name="max_nomatch" target="Element@1246480362:1500801396500">
+<bendpoint>
+<dim1 x="257" y="-58"/>
+<dim2 x="0" y="-58"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@1246480362:1500801396500">
+<bendpoint>
+<dim1 x="257" y="60"/>
+<dim2 x="0" y="60"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@1246480362:1500801396500" name="PlayWrongSelection_2" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="167" x="240" y="240">
+<exit_states>
+<exit_state name="done" target="Element@892467649:1500801396500"/>
+</exit_states>
+</element>
+<element height="46" id="Element@581031535:1500841454449" name="Exception" type="Page Connector" width="104" x="216" y="409">
+<page_connector target="Element@1898672404:1505426069185">Exception<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@431078781:1547260216703" name="Get Session Info" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="134" x="16" y="315">
+<exit_states>
+<exit_state name="done" target="Element@1534468932:1547260557668"/>
+<exit_state name="Java Exception-Any" target="Element@581031535:1500841454449"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1534468932:1547260557668" name="Get Short Link" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="125" x="20" y="396">
+<exit_states>
+<exit_state name="done" target="Element@1312123715:1547260570653"/>
+<exit_state name="Java Exception-Any" target="Element@581031535:1500841454449"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1312123715:1547260570653" name="Send SMS" src="com.audium.server.action.rest.client.RestClientAction" type="Action Element" width="102" x="32" y="492">
+<exit_states>
+<exit_state name="done" target="Element@16204083:1472985283362"/>
+<exit_state name="Java Exception-Any" target="Element@581031535:1500841454449"/>
+</exit_states>
+</element>
+</page>

@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@402223304:1506010210238" name="SetReturnVars_NoVIVR" version="6.0.1">
+<config>
+<settings>
+<setting name="maintainer"/>
+<setting name="language"/>
+<setting name="encoding"/>
+<setting name="default_audio_path"/>
+<setting name="remove_session_data"/>
+</settings>
+<session_data>
+<data create_when="After" name="caller_input">NOVIVR</data>
+<data create_when="After" name="context_tag">NOVIVR</data>
+<data create_when="After" name="context_note">No Visual IVR Interaction</data>
+</session_data>
+</config>
+</action_element>

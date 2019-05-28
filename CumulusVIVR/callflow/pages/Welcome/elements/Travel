@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@768640324:1504532939810" name="Travel" version="6.0.1">
+<config>
+<settings>
+<setting name="travel">{LocalVar.vertical_id}</setting>
+</settings>
+<session_data>
+<data create_when="After" name="company_name">Cumulus Travel</data>
+<data create_when="After" name="interaction_id">1504902996437-2345b2a39832f45634e58e8004815e61d35ee1-38df</data>
+<data create_when="After" name="application_key">f652b15a-999c-45f9-88ef-ff302451600a</data>
+</session_data>
+</config>
+</action_element>

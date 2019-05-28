@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@460710472:1504545927947" name="Finance" version="6.0.1">
+<config>
+<settings>
+<setting name="finance">{LocalVar.vertical_id}</setting>
+</settings>
+<session_data>
+<data create_when="After" name="company_name">Cumulus Finance</data>
+<data create_when="After" name="interaction_id">1504903078933-63535b2a39832f45634e58e8004815e61d35ee1-20f4</data>
+<data create_when="After" name="application_key">4c051dde-ca1c-4682-8536-8795938ac63e</data>
+</session_data>
+</config>
+</action_element>

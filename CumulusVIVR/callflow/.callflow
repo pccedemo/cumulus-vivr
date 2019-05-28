@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<callflow id="Callflow@6742037:1450081034666" version="6.0.1">
+<page closed="false" id="Page@10350027:1450081034666">Start</page>
+<page closed="false" id="Page@1345494808:1500585924450">ContextService</page>
+<page closed="false" id="Page@1485567163:1546684082570">VerticalConfig</page>
+<page closed="false" id="Page@1151614598:1500749268711">Welcome</page>
+<page closed="false" id="Page@4982081:1472985175611">VisualIVR</page>
+<page closed="false" id="Page@33125725:1464808880952">VIVRLoop</page>
+<page closed="false" id="Page@1874459268:1505425960060">NoIVR</page>
+<page closed="false" id="Page@238493130:1500574860192">Transfer</page>
+</callflow>

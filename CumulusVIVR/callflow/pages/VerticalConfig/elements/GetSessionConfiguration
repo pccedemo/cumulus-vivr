@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@18404074:1546684129992" name="GetSessionConfiguration" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">https://branding.dcloud.cisco.com/api/v1/configure</setting>
+<setting name="HTTPMethod">GET</setting>
+<setting name="Parameters"/>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers"/>
+<setting name="useProxy">false</setting>
+<setting name="xpathexpression">$.cvp</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+<session_data>
+<data create_when="After" name="get_session_configuration">{Data.Element.GetSessionConfiguration.response_body}</data>
+</session_data>
+<local_events>
+<local_event>
+<name>Any</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

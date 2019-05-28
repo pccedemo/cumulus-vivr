@@ -1,0 +1,102 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@33125725:1464808880952" name="VIVRLoop" version="6.0.1">
+<element height="46" id="Element@8938771:1464808880952" name="VIVRLoop" type="Page Entry" width="104" x="61" y="12">
+<exit_states>
+<exit_state name="next" target="Element@7608901:1464809093608"/>
+</exit_states>
+</element>
+<element height="46" id="Element@32134230:1464809093608" name="HasInteractionStarted" type="Decision" width="164" x="31" y="264">
+<exit_states>
+<exit_state name="No" target="Element@7608901:1464809093608"/>
+<exit_state name="Yes" target="Element@25441554:1464809093608"/>
+</exit_states>
+</element>
+<element height="46" id="Element@7608901:1464809093608" name="WaitBeforeInteractionStarted" src="com.audium.server.voiceElement.number.MBasicNumber" type="Voice Element" width="202" x="12" y="96">
+<exit_states>
+<exit_state name="done" target="Element@15771916:1464809093608"/>
+<exit_state name="max_nomatch" target="Element@15771916:1464809093608"/>
+<exit_state name="max_noinput" target="Element@15771916:1464809093608"/>
+</exit_states>
+</element>
+<element height="46" id="Element@12075502:1464809093608" name="GetNextAction" src="GetActionSimple" type="Action Element" width="133" x="46" y="480">
+<exit_states>
+<exit_state name="done" target="Element@15013545:1464809093608"/>
+</exit_states>
+</element>
+<element height="46" id="Element@15013545:1464809093608" name="HasAction" type="Decision" width="105" x="60" y="552">
+<exit_states>
+<exit_state name="Yes" target="Element@3322555:1464809093608"/>
+<exit_state name="No" target="Element@25441554:1464809093608">
+<bendpoint>
+<dim1 x="106" y="-34"/>
+<dim2 x="105" y="170"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="106" y="-128"/>
+<dim2 x="105" y="76"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@3322555:1464809093608" name="Is Transfer" type="Decision" width="104" x="61" y="636">
+<exit_states>
+<exit_state name="Yes" target="Element@24338645:1464809583141"/>
+<exit_state name="No" target="Element@25441554:1464809093608">
+<bendpoint>
+<dim1 x="138" y="-118"/>
+<dim2 x="138" y="170"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="138" y="-213"/>
+<dim2 x="138" y="75"/>
+</bendpoint>
+</exit_state>
+<exit_state name="UpdateContextStore" target="Element@33096553:1469040187455">
+<bendpoint>
+<dim1 x="206" y="-2"/>
+<dim2 x="-1" y="154"/>
+</bendpoint>
+<bendpoint>
+<dim1 x="206" y="-81"/>
+<dim2 x="-1" y="75"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@25441554:1464809093608" name="WaitForTransfer" src="com.audium.server.voiceElement.number.MBasicNumber" type="Voice Element" width="134" x="46" y="348">
+<exit_states>
+<exit_state name="done" target="Element@12075502:1464809093608"/>
+<exit_state name="max_nomatch" target="Element@12075502:1464809093608">
+<bendpoint>
+<dim1 x="36" y="81"/>
+<dim2 x="37" y="-51"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@12075502:1464809093608">
+<bendpoint>
+<dim1 x="-33" y="57"/>
+<dim2 x="-32" y="-75"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@15771916:1464809093608" name="GetTheInteractionUniqueID" src="GetInteractionUniqueId" type="Action Element" width="194" x="16" y="180">
+<exit_states>
+<exit_state name="done" target="Element@32134230:1464809093608"/>
+</exit_states>
+</element>
+<element height="46" id="Element@24338645:1464809583141" name="Transfer" type="Page Connector" width="93" x="66" y="720">
+<page_connector target="Element@1016407433:1500842955578">Transfer<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@33096553:1469040187455" name="VIVRIntent" src="com.audium.server.action.context.ApplicationModifier" type="Action Element" width="110" x="265" y="480">
+<exit_states>
+<exit_state name="done" target="Element@25441554:1464809093608">
+<bendpoint>
+<dim1 x="-1" y="-132"/>
+<dim2 x="206" y="0"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+</page>

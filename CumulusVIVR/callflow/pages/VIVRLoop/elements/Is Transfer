@@ -1,0 +1,26 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision id="Element@3322555:1464809093608" name="Is Transfer" version="6.0.1">
+<config>
+<source type="Decision Editor"><![CDATA[<knowledge_base>
+    <rule default_exit_state="No" name="Is Transfer">
+        <exit_state conjugate="and" name="Yes">
+            <string operator="equal">
+                <data>
+                    <element name="GetNextAction" variable="actionName"/>
+                </data>
+                <constant_string value="transfer"/>
+            </string>
+        </exit_state>
+        <exit_state conjugate="and" name="UpdateContextStore">
+            <string operator="equal">
+                <data>
+                    <element name="GetNextAction" variable="actionName"/>
+                </data>
+                <constant_string value="UpdateContextStore"/>
+            </string>
+        </exit_state>
+    </rule>
+</knowledge_base>
+]]></source>
+</config>
+</decision>

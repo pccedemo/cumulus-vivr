@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@985887933:1505426014810" name="PODAddNoVIVR" version="6.0.1">
+<config>
+<settings>
+<setting name="customerId">{Data.Session.customer_id}</setting>
+<setting name="tags">{Data.Session.context_tag}</setting>
+<setting name="fieldsets">cisco.base.pod</setting>
+<setting name="Context_Notes">{Data.Session.context_note}</setting>
+<setting name="Context_POD_Activity_Link">{Data.Session.company_name}</setting>
+</settings>
+<local_events>
+<local_event>
+<name>Any</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

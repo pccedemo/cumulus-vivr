@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1741433266:1546684129992" name="Parse_Vertical_Config" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="interaction_id">{LocalVar.interaction_id}</data>
+<data create_when="After" name="application_key">{LocalVar.application_key}</data>
+</log>
+<settings>
+<setting name="company_name">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_vertical_config}
+var ret= JSONPathUtil.eval(inputJSON, "$.name");
+String(ret);</setting>
+<setting name="welcome_prompt">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_vertical_config}
+var ret= JSONPathUtil.eval(inputJSON, "$.cvp.welcomePrompt");
+String(ret);</setting>
+<setting name="interaction_id">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_vertical_config}
+var ret= JSONPathUtil.eval(inputJSON, "$.cvp.jacadaMenu.interactionId");
+String(ret);</setting>
+<setting name="application_key">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_vertical_config}
+var ret= JSONPathUtil.eval(inputJSON, "$.cvp.jacadaMenu.applicationKey");
+String(ret);</setting>
+</settings>
+<session_data>
+<data create_when="After" name="company_name">{LocalVar.company_name}</data>
+<data create_when="After" name="interaction_id">{LocalVar.interaction_id}</data>
+<data create_when="After" name="application_key">{LocalVar.application_key}</data>
+</session_data>
+</config>
+</action_element>

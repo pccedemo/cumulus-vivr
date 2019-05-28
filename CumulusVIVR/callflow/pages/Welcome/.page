@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<page id="Page@1151614598:1500749268711" name="Welcome" version="6.0.1">
+<element height="46" id="Element@2063921822:1500749268711" name="Welcome" type="Page Entry" width="100" x="46" y="12">
+<exit_states>
+<exit_state name="next" target="Element@1521584504:1500800859983"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1608930730:1500800859983" name="MenuVerticalSelection" src="com.audium.server.voiceElement.menu.MFoundation5OptionMenu" type="Voice Element" width="168" x="252" y="264">
+<exit_states>
+<exit_state name="option1" target="Element@768640324:1504532939810"/>
+<exit_state name="option2" target="Element@1118271141:1504545945229"/>
+<exit_state name="option3" target="Element@460710472:1504545927947"/>
+<exit_state name="option4" target="Element@1264508890:1504545956229"/>
+<exit_state name="option5" target="Element@1088842529:1504545962572"/>
+<exit_state name="max_nomatch" target="Element@277190076:1500800859983">
+<bendpoint>
+<dim1 x="82" y="-118"/>
+<dim2 x="82" y="50"/>
+</bendpoint>
+</exit_state>
+<exit_state name="max_noinput" target="Element@277190076:1500800859983">
+<bendpoint>
+<dim1 x="-78" y="-116"/>
+<dim2 x="-78" y="52"/>
+</bendpoint>
+</exit_state>
+</exit_states>
+</element>
+<element height="46" id="Element@277190076:1500800859983" name="PlayWrongSelection" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="156" x="258" y="96">
+<exit_states>
+<exit_state name="done" target="Element@1608930730:1500800859983"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1035490252:1500800859983" name="PlayCustomerName" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="156" x="18" y="180">
+<exit_states>
+<exit_state name="done" target="Element@1527823376:1504529227881"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1521584504:1500800859983" name="PlayWelcomeGreeting" src="com.audium.server.voiceElement.audio.MAudio" type="Voice Element" width="167" x="12" y="96">
+<exit_states>
+<exit_state name="done" target="Element@1035490252:1500800859983"/>
+</exit_states>
+</element>
+<element height="46" id="Element@682957261:1500803332410" name="VisualIVR" type="Page Connector" width="98" x="47" y="516">
+<page_connector target="Element@15543847:1472985175611">VisualIVR<config/>
+</page_connector>
+</element>
+<element height="46" id="Element@1527823376:1504529227881" name="CheckCustomerCount_2" type="Decision" width="179" x="6" y="264">
+<exit_states>
+<exit_state name="found" target="Element@682957261:1500803332410"/>
+<exit_state name="notfound" target="Element@1608930730:1500800859983"/>
+</exit_states>
+</element>
+<element height="46" id="Element@768640324:1504532939810" name="Travel" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="82" x="484" y="264">
+<exit_states>
+<exit_state name="done" target="Element@682957261:1500803332410"/>
+</exit_states>
+</element>
+<element height="46" id="Element@460710472:1504545927947" name="Finance" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="91" x="480" y="408">
+<exit_states>
+<exit_state name="done" target="Element@682957261:1500803332410"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1118271141:1504545945229" name="Health" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="85" x="483" y="336">
+<exit_states>
+<exit_state name="done" target="Element@682957261:1500803332410"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1264508890:1504545956229" name="City" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="71" x="490" y="477">
+<exit_states>
+<exit_state name="done" target="Element@682957261:1500803332410"/>
+</exit_states>
+</element>
+<element height="46" id="Element@1088842529:1504545962572" name="Utility" src="com.audium.server.action.setvalue.SetValueAction" type="Action Element" width="81" x="485" y="555">
+<exit_states>
+<exit_state name="done" target="Element@682957261:1500803332410"/>
+</exit_states>
+</element>
+</page>

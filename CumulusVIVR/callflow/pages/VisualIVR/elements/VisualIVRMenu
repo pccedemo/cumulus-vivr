@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@892467649:1500801396500" name="VisualIVRMenu" version="6.0.1">
+<config>
+<settings>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">3</setting>
+<setting name="max_nomatch_count">3</setting>
+<setting name="confidence_level">0.40</setting>
+<setting name="modal">false</setting>
+<setting name="option1_dtmf">1</setting>
+<setting name="option1_voice">1</setting>
+<setting name="option1_value">1</setting>
+<setting name="option2_dtmf">2</setting>
+<setting name="option2_voice">2</setting>
+<setting name="option2_value">2</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri=""><![CDATA[We have an exciting new way, to get you quickly to the help you need. If you are on a smartphone, please press 1, to receive a text message with a link, to our visual menu. If you want to hold for an agent, please press 2.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

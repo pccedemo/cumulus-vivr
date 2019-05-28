@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1088842529:1504545962572" name="Utility" version="6.0.1">
+<config>
+<settings>
+<setting name="utility">{LocalVar.vertical_id}</setting>
+</settings>
+<session_data>
+<data create_when="After" name="company_name">Cumulus Gas and Electric</data>
+<data create_when="After" name="interaction_id">1504907031358-5725b2a39832f45634e58e8004815e636ed7c-810e</data>
+<data create_when="After" name="application_key">521a87ee-569a-4db6-8ed1-28162926ada2</data>
+</session_data>
+</config>
+</action_element>

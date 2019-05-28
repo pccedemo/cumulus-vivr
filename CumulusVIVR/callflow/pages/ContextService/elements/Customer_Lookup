@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@878773315:1504522231772" name="Customer_Lookup" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="customer_count">{Data.Element.Customer_Lookup.customer_count}</data>
+<data create_when="After" name="customer_fields">{Data.Element.Customer_Lookup.search_result_as_json}</data>
+</log>
+<settings>
+<setting name="QueryParameters">'Context_Work_Phone':'{CallData.ANI}','Context_Home_Phone':'{CallData.ANI}','Context_Mobile_Phone':'{CallData.ANI}'</setting>
+<setting name="Operator">OR</setting>
+</settings>
+<session_data>
+<data create_when="After" name="customer_id">{Data.Element.Customer_Lookup.customer_id}</data>
+<data create_when="After" name="customer_count">{Data.Element.Customer_Lookup.customer_count}</data>
+<data create_when="After" name="first_name">{Data.Element.Customer_Lookup.context_first_name}</data>
+<data create_when="After" name="last_name">{Data.Element.Customer_Lookup.context_last_name}</data>
+<data create_when="After" name="street_address_1">{Data.Element.Customer_Lookup.context_street_address_1}</data>
+<data create_when="After" name="street_address_2">{Data.Element.Customer_Lookup.context_street_address_2}</data>
+<data create_when="After" name="city">{Data.Element.Customer_Lookup.context_city}</data>
+<data create_when="After" name="state">{Data.Element.Customer_Lookup.context_state}</data>
+<data create_when="After" name="zip">{Data.Element.Customer_Lookup.context_zip}</data>
+<data create_when="After" name="country">{Data.Element.Customer_Lookup.context_country}</data>
+<data create_when="After" name="mobile_phone">{Data.Element.Customer_Lookup.context_mobile_phone}</data>
+<data create_when="After" name="work_phone">{Data.Element.Customer_Lookup.Context_Work_Phone}</data>
+<data create_when="After" name="home_phone">{Data.Element.Customer_Lookup.context_home_phone}</data>
+<data create_when="After" name="work_email">{Data.Element.Customer_Lookup.context_work_email}</data>
+<data create_when="After" name="home_email">{Data.Element.Customer_Lookup.context_home_email}</data>
+<data create_when="After" name="customer_external_id">{Data.Element.Customer_Lookup.context_customer_external_id}</data>
+</session_data>
+<local_events>
+<local_event>
+<name>Any</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

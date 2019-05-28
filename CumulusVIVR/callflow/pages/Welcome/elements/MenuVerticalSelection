@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<voice_element id="Element@1608930730:1500800859983" name="MenuVerticalSelection" version="6.0.1">
+<config>
+<settings>
+<setting name="noinput_timeout">5s</setting>
+<setting name="max_noinput_count">3</setting>
+<setting name="max_nomatch_count">3</setting>
+<setting name="confidence_level">0.40</setting>
+<setting name="modal">false</setting>
+<setting name="option1_dtmf">1</setting>
+<setting name="option1_voice">travel</setting>
+<setting name="option1_value">travel</setting>
+<setting name="option2_dtmf">2</setting>
+<setting name="option2_voice">health</setting>
+<setting name="option2_value">health</setting>
+<setting name="option3_dtmf">3</setting>
+<setting name="option3_voice">finance</setting>
+<setting name="option3_value">finance</setting>
+<setting name="option4_dtmf">4</setting>
+<setting name="option4_voice">city</setting>
+<setting name="option4_value">city</setting>
+<setting name="option5_dtmf">5</setting>
+<setting name="option5_voice">utility</setting>
+<setting name="option5_value">utility</setting>
+</settings>
+<audio>
+<audio_group barge_in="true" count="1" name="initial_audio_group">
+<audio_item name="audio item 1" type="static">
+<audio_item_notes/>
+<audio_item_config view_id="default">
+<static default_audio_path="true" uri=""><![CDATA[Press 1 for Cumulus Travel; 2 for Cumulus Health Care; 3 for Cumulus Finance; 4 for Cumulus City; and 5 for Cumulus Gas and Electricity.]]></static>
+</audio_item_config>
+</audio_item>
+</audio_group>
+</audio>
+</config>
+</voice_element>

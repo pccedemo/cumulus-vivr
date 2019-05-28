@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@1534468932:1547260557668" name="Get Short Link" version="6.0.1">
+<config>
+<settings>
+<setting name="EndpointURL">https://branding.dcloud.cisco.com/api/v1/link</setting>
+<setting name="HTTPMethod">GET</setting>
+<setting name="Parameters">'url':'https\://{Data.Session.datacenter}-{Data.Session.session_id}.tunnel.cc-dcloud.com/mobileweb/?interaction={Data.Session.interaction_id}&amp;appkey={Data.Session.application_key}&amp;accountId=vivr&amp;Language=English&amp;External+Session+Id={CallData.ANI}&amp;Phone+Number={CallData.ANI}'</setting>
+<setting name="ignoreCertificateValidation">true</setting>
+<setting name="requireHttpAuthentication">false</setting>
+<setting name="headers"/>
+<setting name="useProxy">false</setting>
+<setting name="xpathexpression">$</setting>
+<setting name="connectTimeout">3000</setting>
+<setting name="readTimeout">5000</setting>
+</settings>
+<session_data>
+<data create_when="After" name="short_url">{Data.Element.Get Short Link.id}</data>
+</session_data>
+<local_events>
+<local_event>
+<name>Any</name>
+<eventlist>java.lang.Exception</eventlist>
+<type>Java Exception</type>
+</local_event>
+</local_events>
+</config>
+</action_element>

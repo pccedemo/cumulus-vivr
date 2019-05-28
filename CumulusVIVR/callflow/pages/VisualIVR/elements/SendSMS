@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<decision_element id="Element@1904498956:1500566040923" name="SendSMS" version="6.0.1">
+<config>
+<log>
+<data create_when="" name="interaction_id">{Data.Session.interaction_id}</data>
+<data create_when="" name="application_key">{Data.Session.application_key}</data>
+</log>
+<settings>
+<setting name="interactHost">http://cceweb.dcloud.cisco.com:8982</setting>
+<setting name="interactInteractionId">{Data.Session.interaction_id}</setting>
+<setting name="interactAppKey">{Data.Session.application_key}</setting>
+<setting name="interactAccountId">vivr</setting>
+<setting name="interactLanguage">English</setting>
+<setting name="interactExtraParam">alloLocation=false</setting>
+<setting name="shortenerURL">http://cceweb.dcloud.cisco.com:8982/UrlShortener/createShort</setting>
+<setting name="appKey">673b617d-8110-12d1-6ce8-2bbaef2af9d6</setting>
+<setting name="textMessage">Click on the link to launch Visual IVR [link]</setting>
+</settings>
+<session_data>
+<data create_when="After" name="short_url">{Data.Session.shortURL}</data>
+</session_data>
+</config>
+</decision_element>

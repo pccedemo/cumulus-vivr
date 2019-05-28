@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<action_element id="Element@79626550:1546684129992" name="ParseSessionConfiguration" version="6.0.1">
+<config>
+<log>
+<data create_when="After" name="vertical_id">{LocalVar.vertical_id}</data>
+</log>
+<settings>
+<setting name="vertical_id">importPackage(com.audium.server.cvpUtil);
+var inputJSON = {Data.Session.get_session_configuration}
+var ret= JSONPathUtil.eval(inputJSON, "$.configuration.vertical");
+String(ret);</setting>
+</settings>
+</config>
+</action_element>
